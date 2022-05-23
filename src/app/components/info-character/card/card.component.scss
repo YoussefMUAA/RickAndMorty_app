@@ -1,0 +1,7 @@
+@import 'variables';
+
+.card{
+  border-left: 3px solid $primaryColor;
+   border-bottom: 1px solid $blackColor;
+  padding: 10px;
+}

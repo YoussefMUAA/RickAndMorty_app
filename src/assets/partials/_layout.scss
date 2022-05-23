@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box; //cambiar el modelo de caja
+}
+
+
+body{
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}

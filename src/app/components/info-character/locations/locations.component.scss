@@ -1,0 +1,13 @@
+@import 'variables';
+
+.card{
+  border-left: 3px solid $primaryColor;
+   border-bottom: 1px solid $blackColor;
+  padding: 10px;
+}
+
+h2{
+  font-size: 250%;
+  text-decoration: underline;
+  margin: 0 0 10px 10px;
+}

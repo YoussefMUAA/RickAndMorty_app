@@ -1,0 +1,10 @@
+<div>
+  <h2>Episodios</h2>
+  <div class="row">
+
+    <article class="col-12 col-t-6 col-d-3" *ngFor="let episode of arrEpisodes">
+      <app-card [url]="episode" [tipo]=" 'episode' "></app-card>
+    </article>
+
+  </div>
+</div>

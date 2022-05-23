@@ -1,0 +1,34 @@
+<section class="infocharacter">
+  <h2>{{character?.name}}</h2>
+  <div class="row">
+    <figure class="col-12  col-t-3">
+      <img [src]="character?.image" [alt]="character?.name">
+    </figure>
+    <div class="col-12 col-t-9">
+      <ul>
+        <li>Especie: <strong> {{character?.species}}</strong></li>
+        <li>Genero <strong> {{character?.gender}}</strong></li>
+        <li>Estado: <strong
+            [ngClass]="{'dead': character?.status === 'Dead', 'alive': character?.status === 'Alive', 'unknown': character?.status === 'unknown'}">
+            {{character?.status}}</strong>
+          <span *ngIf="character?.status === 'Dead'"> 💀</span>
+          <span *ngIf="character?.status === 'Alive'"> 👽</span>
+          <span *ngIf="character?.status === 'unknown'">❓</span>
+        </li>
+        <!--
+          si el character esta vivo el texto lo colacamos en verde
+          si esta muerto en rojo
+          si desconocido en gold
+        -->
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <nav>
+    <ul class="submenu">
+      <li routerLinkActive="active" [routerLink]="['/character', character?.id, 'episodes']">Episodios</li>
+      <li routerLinkActive="active" [routerLink]="['/character', character?.id, 'locations']">Localizaciones</li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</section>
